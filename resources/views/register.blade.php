@@ -33,7 +33,16 @@
 		</div>
 		<div class="mb-3 form-check">
 		  </div>
-		<a href="/login" type="submit" class="btn btn-primary">Masuk</a>
+		<a href="/login" type="submit" class="btn btn-primary">Daftar</a>
+    <br>
+	<br>
+	<h5 class="text-center">Sudah Memiliki Akun ?</h5>
+	<h5 class="text-center">Silahan Login Jika Anda Telah Memiliki Akun !</h5>
+	<br>
+	<div class="d-grid gap-2">
+		<a href="/register" class="btn btn-primary container" type="button">Login</a>
+		
+	  </div>
 	</div>
 	  </form>
 </body>

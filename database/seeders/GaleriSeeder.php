@@ -13,12 +13,12 @@ class GaleriSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('galeris')->insert([
-            'nama' => 'Andi Riyadh Madani Afif',
-            'tanggallahir' => 'Makassar, 4 Februari 2006',
-            'jeniskelamin' => 'laki-laki',
-            'nomortelepon' => '082187420345',
-            'usia' => '17 Tahun'
+        DB::table('galeriuser')->insert([
+            'username' => '',
+            'password' => '',
+            'email' => '',
+            'namalengkap' => '',
+            'alamat' => ''
         ]);
     }
 }

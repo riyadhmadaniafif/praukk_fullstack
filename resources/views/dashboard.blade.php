@@ -7,13 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1 class="text-center mb-5">Tabel Data Foto & Gambar</h1>
+    <h1 class="text-center mb-5">Tabel Pengguna Foto & Gambar</h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     {{-- Tabel Data --}}
     
     <div class="container">
-        <a href="/tambahgaleri" class="btn btn-success">Tambah +</a>
+        <a href="/tambahdata" class="btn btn-success">Tambah +</a>
         <div class="row">
           @if ($message = Session::get('success'))
           <div class="alert alert-success" role="alert">
@@ -24,13 +24,13 @@
         <thead>
           <tr>
             <th scope="col">No</th>
-            <th scope="col">Nama</th>
-            <th scope="col">Tanggal Lahir</th>
-            <th scope="col">Jenis Kelamin</th>
-            <th scope="col">Nomor Telepon</th>
-            <th scope="col">Usia</th>
+            <th scope="col">Username</th>
+            <th scope="col">Password</th>
+            <th scope="col">Email</th>
+            <th scope="col">Nama Lengkap</th>
+            <th scope="col">Alamat</th>
             <th scope="col">Dibuat</th>
-            <th scope="col">Foto</th>
+            <th scope="col">Diubah</th>
             <th scope="col">Aksi</th>
           </tr>
         </thead>
@@ -42,12 +42,13 @@
               
           <tr>
             <th scope="row">{{ $no++ }}</th>
-            <td>{{ $row->nama }}</td>
-            <td>{{ $row->tanggallahir }}</td>
-            <td>{{ $row->jeniskelamin }}</td>
-            <td>0{{ $row->nomortelepon }}</td>
-            <td>{{ $row->usia }}</td>
+            <td>{{ $row->username }}</td>
+            <td>{{ $row->password }}</td>
+            <td>{{ $row->email }}</td>
+            <td>{{ $row->namalengkap }}</td>
+            <td>{{ $row->alamat }}</td>
             <td>{{ $row->created_at->format('D M Y') }}</td>
+            <td>{{ $row->updated_at->format('D M Y') }}</td>
             <td>
               <img src="{{ asset('fotosesuatu/'.$row->foto) }}" alt="" style="width: 100px;">
             </td>

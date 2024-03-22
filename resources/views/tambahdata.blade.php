@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1 class="text-center mb-5">Tambah Data Foto & Gambar</h1>
+    <h1 class="text-center mb-5">Tambah Pengguna Foto & Gambar</h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     {{-- Form Data --}}
@@ -20,39 +20,30 @@
             <form action="/insertdata" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="mb-3">
-                <label for="exampleInputnama" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="exampleInputnama" class="form-label">Username</label>
+                <input type="text" class="form-control" name="username" id="exampleInputUsername" aria-describedby="usernameHelp">
                 <div id="textHelp" class="form-text">Your Name will show to everyone.</div>
               </div>
               <div class="mb-3">
-                <label for="exampleInputtanggallahir" class="form-label">Tanggal Lahir</label>
-                <input type="date" class="form-control" name="tanggallahir" id="exampleInputtanggallahir">
+                <label for="exampleInputpassword" class="form-label">Password</label>
+                <input type="text" class="form-control" name="password" id="exampleInputpassword">
               </div>
               <div class="mb-3">
-                <label for="exampleInputjeniskelamin" class="form-label">Jenis Kelamin</label>
-                <select class="form-select" aria-label="Default select example" name="jeniskelamin">
-                  <option selected>Pilih Jenis Kelamin</option>
-                  <option value="laki-laki">Laki-Laki</option>
-                  <option value="perempuan">Perempuan</option>
-                  <option value="tidakinginmemberitahu">Tidak Ingin Memberi Tahu</option>
-                </select>
+                <label for="exampleInputjeniskelamin" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" id="exampleInputemail">
                 
               </div>
               <div class="mb-3">
-                <label for="exampleInputnomortelepon" class="form-label">Nomor Telepon</label>
-                <input type="number" class="form-control" id="exampleInputnomortelepon" name="nomortelepon">
+                <label for="exampleInputnamalengkap" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="exampleInputnamalengkap" name="namalengkap">
               </div>
               <div class="mb-3">
-                <label for="exampleInputnomortelepon" class="form-label">Masukkan Foto</label>
-                <input type="file" class="form-control" name="foto">
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputusia" class="form-label">Usia</label>
-                <input type="text" class="form-control" id="exampleInputusia" name="usia">
+                <label for="exampleInputusia" class="form-label">Alamat</label>
+                <input type="text" class="form-control" id="exampleInputalamat" name="alamat">
               </div>
               <div class="mb-3 form-check">
               </div>
-              <button type="submit" class="btn btn-primary">Masuk</button>
+              <button type="submit" class="btn btn-primary">Tambahkan</button>
             </form>
           </div>
         </div>
